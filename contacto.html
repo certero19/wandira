@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeTravel - Contáctanos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="bg-teal text-white text-center p-4">
+        <h1>Contáctanos</h1>
+        <p>Estamos aquí para ayudarte a planificar tu viaje perfecto</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BeTravel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://viaje-pe.vercel.app/wandira-travel" target="_blank">Revista Virtual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Información de Contacto -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="service-item text-center">
+                            <i class="fas fa-map-marker-alt fa-3x mb-3 text-primary"></i>
+                            <h5>Ubicación</h5>
+                            <p>Av. Principal 123<br>
+                            Centro Comercial Plaza<br>
+                            Ciudad, País 12345</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="service-item text-center">
+                            <i class="fas fa-phone fa-3x mb-3 text-primary"></i>
+                            <h5>Teléfonos</h5>
+                            <p>Teléfono: +1 (555) 123-4567<br>
+                            WhatsApp: +1 (555) 987-6543<br>
+                            <strong>Atención 24/7</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="service-item text-center">
+                            <i class="fas fa-envelope fa-3x mb-3 text-primary"></i>
+                            <h5>Email</h5>
+                            <p>info@betravel.com<br>
+                            reservas@betravel.com<br>
+                            soporte@betravel.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2 class="text-center mb-4">
+                            <i class="fas fa-paper-plane text-primary"></i> Envíanos un Mensaje
+                        </h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="procesar_contacto.php" method="post" id="contactForm" onsubmit="return validateContactForm()">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nombre" class="form-label">
+                                                <i class="fas fa-user text-primary"></i> Nombre Completo
+                                            </label>
+                                            <input type="text" id="nombre" name="nombre" class="form-control" required />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">
+                                                <i class="fas fa-envelope text-primary"></i> Email
+                                            </label>
+                                            <input type="email" id="email" name="email" class="form-control" required />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="telefono" class="form-label">
+                                                <i class="fas fa-phone text-primary"></i> Teléfono
+                                            </label>
+                                            <input type="tel" id="telefono" name="telefono" class="form-control" />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="asunto" class="form-label">
+                                                <i class="fas fa-tag text-primary"></i> Asunto
+                                            </label>
+                                            <select class="form-select" id="asunto" name="asunto" required>
+                                                <option value="">Selecciona un asunto</option>
+                                                <option value="consulta_general">Consulta General</option>
+                                                <option value="reserva_vuelo">Reserva de Vuelo</option>
+                                                <option value="paquete_turistico">Paquete Turístico</option>
+                                                <option value="hotel">Reserva de Hotel</option>
+                                                <option value="soporte">Soporte Técnico</option>
+                                                <option value="otro">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensaje" class="form-label">
+                                            <i class="fas fa-comment text-primary"></i> Mensaje
+                                        </label>
+                                        <textarea id="mensaje" name="mensaje" rows="5" class="form-control" 
+                                                placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter" value="1">
+                                        <label class="form-check-label" for="newsletter">
+                                            Quiero recibir ofertas especiales y noticias por email
+                                        </label>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redes Sociales -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">
+                    <i class="fas fa-share-alt text-primary"></i> Síguenos en Redes Sociales
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="row text-center">
+                            <div class="col-md-3 mb-3">
+                                <a href="https://www.facebook.com/BeTravel" target="_blank" class="text-decoration-none">
+                                    <div class="service-item">
+                                        <i class="fab fa-facebook fa-3x mb-3" style="color: #1877f2;"></i>
+                                        <h6>Facebook</h6>
+                                        <p class="small">Síguenos para ofertas exclusivas</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <a href="https://www.instagram.com/BeTravel" target="_blank" class="text-decoration-none">
+                                    <div class="service-item">
+                                        <i class="fab fa-instagram fa-3x mb-3" style="color: #e4405f;"></i>
+                                        <h6>Instagram</h6>
+                                        <p class="small">Fotos increíbles de destinos</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <a href="https://www.twitter.com/BeTravel" target="_blank" class="text-decoration-none">
+                                    <div class="service-item">
+                                        <i class="fab fa-twitter fa-3x mb-3" style="color: #1da1f2;"></i>
+                                        <h6>Twitter</h6>
+                                        <p class="small">Noticias y actualizaciones</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <a href="https://wa.me/15559876543" target="_blank" class="text-decoration-none">
+                                    <div class="service-item">
+                                        <i class="fab fa-whatsapp fa-3x mb-3" style="color: #25d366;"></i>
+                                        <h6>WhatsApp</h6>
+                                        <p class="small">Atención inmediata 24/7</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horarios de Atención -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">
+                                    <i class="fas fa-clock text-primary"></i> Horarios de Atención
+                                </h3>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong>Lunes a Viernes</strong><br>
+                                        8:00 AM - 8:00 PM
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>Sábados</strong><br>
+                                        9:00 AM - 6:00 PM
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong>Domingos</strong><br>
+                                        10:00 AM - 4:00 PM
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>WhatsApp</strong><br>
+                                        <span class="text-success">24/7 Disponible</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con Información de Contacto -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-map-marker-alt"></i> Ubicación</h5>
+                    <p>Av. Principal 123<br>
+                    Centro Comercial Plaza<br>
+                    Ciudad, País 12345</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-phone"></i> Contacto</h5>
+                    <p>Teléfono: +1 (555) 123-4567<br>
+                    WhatsApp: +1 (555) 987-6543<br>
+                    Email: info@betravel.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-clock"></i> Horarios</h5>
+                    <p>Lunes a Viernes: 8:00 AM - 8:00 PM<br>
+                    Sábados: 9:00 AM - 6:00 PM<br>
+                    Domingos: 10:00 AM - 4:00 PM<br>
+                    <strong>Atención 24/7 por WhatsApp</strong></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 BeTravel. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://www.facebook.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.twitter.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://wa.me/15559876543" class="text-white" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

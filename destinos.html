@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeTravel - Destinos Populares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="bg-teal text-white text-center p-4">
+        <h1>Destinos Populares</h1>
+        <p>Descubre los lugares más increíbles del mundo</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Wandira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinos.html">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://viaje-pe.vercel.app/wandira-travel" target="_blank">Revista Virtual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Destinos Destacados -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestros Destinos Más Populares</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=400&h=300&fit=crop" class="card-img-top" alt="París">
+                            <div class="card-body">
+                                <h5><i class="fas fa-heart text-danger"></i> París</h5>
+                                <p><strong>La Ciudad del Amor</strong></p>
+                                <p>Descubre la magia de París con sus icónicos monumentos como la Torre Eiffel, el Louvre y los románticos cafés de Montmartre.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-2">Cultura</span>
+                                    <span class="badge bg-success me-2">Romance</span>
+                                    <span class="badge bg-info">Arte</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('París')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('París')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" class="card-img-top" alt="Maldivas">
+                            <div class="card-body">
+                                <h5><i class="fas fa-umbrella-beach text-info"></i> Maldivas</h5>
+                                <p><strong>Paraíso Tropical</strong></p>
+                                <p>Aguas cristalinas, resorts de lujo y playas de arena blanca te esperan en este paraíso tropical del Océano Índico.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info me-2">Playa</span>
+                                    <span class="badge bg-warning me-2">Lujo</span>
+                                    <span class="badge bg-success">Relax</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('Maldivas')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('Maldivas')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1527004760525-b2b8e7b8b8b8?w=400&h=300&fit=crop" class="card-img-top" alt="Suiza">
+                            <div class="card-body">
+                                <h5><i class="fas fa-mountain text-success"></i> Suiza</h5>
+                                <p><strong>Montañas Majestuosas</strong></p>
+                                <p>Paisajes alpinos de ensueño, lagos cristalinos y pueblos pintorescos en el corazón de Europa.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success me-2">Naturaleza</span>
+                                    <span class="badge bg-primary me-2">Aventura</span>
+                                    <span class="badge bg-secondary">Montaña</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('Suiza')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('Suiza')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop" class="card-img-top" alt="Nueva York">
+                            <div class="card-body">
+                                <h5><i class="fas fa-city text-warning"></i> Nueva York</h5>
+                                <p><strong>La Gran Manzana</strong></p>
+                                <p>La ciudad que nunca duerme te espera con Broadway, Central Park, Times Square y una energía incomparable.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-warning me-2">Ciudad</span>
+                                    <span class="badge bg-danger me-2">Cultura</span>
+                                    <span class="badge bg-primary">Shopping</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('Nueva York')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('Nueva York')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&h=300&fit=crop" class="card-img-top" alt="Barcelona">
+                            <div class="card-body">
+                                <h5><i class="fas fa-palette text-primary"></i> Barcelona</h5>
+                                <p><strong>Arte y Mediterráneo</strong></p>
+                                <p>Arquitectura de Gaudí, playas mediterráneas, tapas deliciosas y una vibrante vida nocturna te esperan.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-2">Arte</span>
+                                    <span class="badge bg-info me-2">Playa</span>
+                                    <span class="badge bg-warning">Gastronomía</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('Barcelona')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('Barcelona')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=300&fit=crop" class="card-img-top" alt="Tokio">
+                            <div class="card-body">
+                                <h5><i class="fas fa-torii-gate text-danger"></i> Tokio</h5>
+                                <p><strong>Tradición y Modernidad</strong></p>
+                                <p>Una fascinante mezcla de templos antiguos y rascacielos futuristas, sushi auténtico y tecnología de vanguardia.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger me-2">Cultura</span>
+                                    <span class="badge bg-success me-2">Tecnología</span>
+                                    <span class="badge bg-warning">Gastronomía</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="addToFavorites('Tokio')">
+                                        <i class="fas fa-heart"></i> Favorito
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" onclick="viewDestinationDetails('Tokio')">
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mis Destinos Favoritos -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">
+                    <i class="fas fa-heart text-danger"></i> Mis Destinos Favoritos
+                </h2>
+                <div id="favoriteDestinations" class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-muted">Aún no has agregado destinos a tus favoritos. ¡Haz clic en el corazón de cualquier destino para agregarlo!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros de Búsqueda -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Buscar Destinos</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="destinationType" class="form-label">Tipo de Destino</label>
+                                        <select class="form-select" id="destinationType" onchange="filterDestinations()">
+                                            <option value="">Todos los tipos</option>
+                                            <option value="playa">Playa</option>
+                                            <option value="ciudad">Ciudad</option>
+                                            <option value="montaña">Montaña</option>
+                                            <option value="cultura">Cultura</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="budget" class="form-label">Presupuesto</label>
+                                        <select class="form-select" id="budget" onchange="filterDestinations()">
+                                            <option value="">Cualquier presupuesto</option>
+                                            <option value="bajo">Económico (< $1000)</option>
+                                            <option value="medio">Medio ($1000 - $3000)</option>
+                                            <option value="alto">Premium (> $3000)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary" onclick="searchDestinations()">
+                                        <i class="fas fa-search"></i> Buscar Destinos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con Información de Contacto -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-phone"></i> Contacto</h5>
+                    <p>Teléfono: +51 929 692 835<br>
+                    WhatsApp: +51 929 692 835<br>
+                    Email: info@wandira.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-clock"></i> Horarios</h5>
+
+                    <strong>Escríbanos o contáctenos <br> Atendemos 24/7</strong></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 Wandira. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://www.facebook.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.twitter.com/BeTravel" class="text-white me-3" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://wa.me/15559876543" class="text-white" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
