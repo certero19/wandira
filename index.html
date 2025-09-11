@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wandira - Bienvenido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="bg-teal text-white text-center p-4">
+        <h1>Bienvenido a Wandira</h1>
+        <p>Tu agencia de viajes de confianza</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Wandira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="europa.html">Europa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://viaje-pe.vercel.app/wandira-travel" target="_blank" rel="noopener">Revista Virtual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="oferta.html">Oferta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sudamerica.html">Sudamérica</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Carrusel de Servicios -->
+        <section class="services-carousel py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Nuestros Servicios</h2>
+                <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="service-slide">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" class="img-fluid rounded" alt="Reservas de Vuelos">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3><i class="fas fa-plane"></i> Reservas de Vuelos</h3>
+                                        <p>Facilitamos la compra de boletos aéreos a los mejores precios del mercado. Encuentra vuelos nacionales e internacionales con las mejores aerolíneas.</p>
+                                        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="service-slide">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" class="img-fluid rounded" alt="Paquetes Turísticos">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3><i class="fas fa-suitcase"></i> Paquetes Turísticos</h3>
+                                        <p>Ofrecemos paquetes completos para tus vacaciones. Todo incluido: vuelos, hoteles, traslados y actividades para que solo te preocupes por disfrutar.</p>
+                                        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="service-slide">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&h=400&fit=crop" class="img-fluid rounded" alt="Alojamiento en Hoteles">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3><i class="fas fa-bed"></i> Alojamiento en Hoteles</h3>
+                                        <p>Reservamos hoteles de calidad en tus destinos favoritos. Desde hoteles boutique hasta resorts de lujo, encuentra el alojamiento perfecto.</p>
+                                        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="service-slide">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" class="img-fluid rounded" alt="Asesoría Personalizada">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3><i class="fas fa-user-tie"></i> Asesoría Personalizada</h3>
+                                        <p>Te ayudamos a planificar tu viaje ideal. Nuestros expertos en viajes te brindan asesoría personalizada para crear experiencias únicas.</p>
+                                        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel de Destinos Promocionales -->
+        <section class="promo-destinations py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Destinos en Promoción</h2>
+                <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=400&h=300&fit=crop" class="card-img-top" alt="París">
+                                        <div class="card-body">
+                                            <h5>París</h5>
+                                            <p class="text-danger"><strong>50% OFF</strong></p>
+                                            <p>La ciudad del amor te espera</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" class="card-img-top" alt="Maldivas">
+                                        <div class="card-body">
+                                            <h5>Maldivas</h5>
+                                            <p class="text-danger"><strong>40% OFF</strong></p>
+                                            <p>Paraíso tropical exclusivo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1527004760525-b2b8e7b8b8b8?w=400&h=300&fit=crop" class="card-img-top" alt="Suiza">
+                                        <div class="card-body">
+                                            <h5>Suiza</h5>
+                                            <p class="text-danger"><strong>35% OFF</strong></p>
+                                            <p>Montañas y naturaleza pura</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop" class="card-img-top" alt="Nueva York">
+                                        <div class="card-body">
+                                            <h5>Nueva York</h5>
+                                            <p class="text-danger"><strong>30% OFF</strong></p>
+                                            <p>La gran manzana te llama</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&h=300&fit=crop" class="card-img-top" alt="Barcelona">
+                                        <div class="card-body">
+                                            <h5>Barcelona</h5>
+                                            <p class="text-danger"><strong>45% OFF</strong></p>
+                                            <p>Cultura y playa mediterránea</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="promo-card">
+                                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&h=300&fit=crop" class="card-img-top" alt="Tokio">
+                                        <div class="card-body">
+                                            <h5>Tokio</h5>
+                                            <p class="text-danger"><strong>25% OFF</strong></p>
+                                            <p>Modernidad y tradición</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinos Populares -->
+        <section class="popular-destinations py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Destinos Populares</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=400&h=300&fit=crop" class="card-img-top" alt="París">
+                            <div class="card-body">
+                                <h5>🌍 París</h5>
+                                <p>La ciudad del amor con sus icónicos monumentos y románticos cafés.</p>
+                                <a href="destinos.html" class="btn btn-outline-primary">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" class="card-img-top" alt="Maldivas">
+                            <div class="card-body">
+                                <h5>🏖️ Maldivas</h5>
+                                <p>Paraíso tropical con aguas cristalinas y resorts de lujo.</p>
+                                <a href="destinos.html" class="btn btn-outline-primary">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="destination-card">
+                            <img src="https://images.unsplash.com/photo-1527004760525-b2b8e7b8b8b8?w=400&h=300&fit=crop" class="card-img-top" alt="Suiza">
+                            <div class="card-body">
+                                <h5>🏔️ Suiza</h5>
+                                <p>Montañas majestuosas y paisajes alpinos de ensueño.</p>
+                                <a href="destinos.html" class="btn btn-outline-primary">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Otros Servicios -->
+        <section class="other-services py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Otros Servicios</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="service-item text-center">
+                            <i class="fas fa-car fa-3x mb-3 text-primary"></i>
+                            <h5>Renta de Autos</h5>
+                            <p>Vehículos de todas las categorías</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="service-item text-center">
+                            <i class="fas fa-passport fa-3x mb-3 text-primary"></i>
+                            <h5>Trámites de Visa</h5>
+                            <p>Asesoría completa en documentación</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="service-item text-center">
+                            <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                            <h5>Seguros de Viaje</h5>
+                            <p>Protección total durante tu viaje</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="service-item text-center">
+                            <i class="fas fa-map-marked-alt fa-3x mb-3 text-primary"></i>
+                            <h5>Tours Guiados</h5>
+                            <p>Experiencias únicas con guías expertos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel de Paquetes Turísticos -->
+        <section class="packages-carousel py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Paquetes Turísticos Especiales</h2>
+                <div id="packagesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="package-card">
+                                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=300&fit=crop" class="card-img-top" alt="Paquete Europa">
+                                        <div class="card-body">
+                                            <h5>Paquete Europa Clásica</h5>
+                                            <p>15 días visitando París, Roma, Barcelona y Ámsterdam</p>
+                                            <p class="price">Desde $2,499 USD</p>
+                                            <a href="#" class="btn btn-success">Reservar Ahora</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="package-card">
+                                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop" class="card-img-top" alt="Paquete Caribe">
+                                        <div class="card-body">
+                                            <h5>Paquete Caribe Paradisíaco</h5>
+                                            <p>7 días en Maldivas con todo incluido y spa</p>
+                                            <p class="price">Desde $1,899 USD</p>
+                                            <a href="#" class="btn btn-success">Reservar Ahora</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="package-card">
+                                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&h=300&fit=crop" class="card-img-top" alt="Paquete Asia">
+                                        <div class="card-body">
+                                            <h5>Paquete Asia Milenaria</h5>
+                                            <p>12 días explorando Japón, Tailandia y Singapur</p>
+                                            <p class="price">Desde $2,199 USD</p>
+                                            <a href="#" class="btn btn-success">Reservar Ahora</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="package-card">
+                                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=500&h=300&fit=crop" class="card-img-top" alt="Paquete USA">
+                                        <div class="card-body">
+                                            <h5>Paquete Costa Este USA</h5>
+                                            <p>10 días en Nueva York, Washington y Boston</p>
+                                            <p class="price">Desde $1,799 USD</p>
+                                            <a href="#" class="btn btn-success">Reservar Ahora</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#packagesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#packagesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con Información de Contacto -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5><i class="fas fa-info-circle"></i> Conócenos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="sobre-nosotros.html" class="text-white-50">Sobre nosotros</a></li>
+                        <li><a href="servicios.html" class="text-white-50">Servicios</a></li>
+                        <li><a href="contacto.html" class="text-white-50">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5><i class="fas fa-phone"></i> Contacto</h5>
+                    <p>Teléfono: +51 929 692 835<br>
+                    WhatsApp: +51 929 692 835<br>
+                    Email: info@wandira.com</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5><i class="fas fa-clock"></i> Horarios</h5>
+                    <p><strong>Escríbanos o contáctenos <br> Atendemos 24/7</strong></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 Wandira Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://www.facebook.com/share/19mVN3td8H/?mibextid=wwXIfr" class="text-white me-3" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/wandiratravel?igsh=bWEwY2pkZWV6Ym9s" class="text-white me-3" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://wa.me/51929692835" class="text-white" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
